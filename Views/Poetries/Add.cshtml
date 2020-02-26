@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+<div>
+    <a  href="/Poetries/List">Back to List</a>
+</div>
+<!-- Adding a poetry form-->
+<h2>Add Poetry</h2>
+<form method="post" action="/Poetries/Add">
+    <div><span>Name:</span><input type="text" id="PoetryName" name="PoetryName" /></div>
+    <div><span>Date:</span><input type="text" id="PoetryDate" name="PoetryDate" /></div>
+    <div><span>Description:</span><input type="text" id="PoetryDesc" name="PoetryDesc" /></div>
+    <div><input type="submit" value="Add Poetry" /></div>
+</form>

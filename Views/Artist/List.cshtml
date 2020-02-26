@@ -1,0 +1,25 @@
+﻿
+@model List<BalmeetPassion_Project.Models.Artist>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Artists List</h2>
+<div>
+    <a href="/Artist/Add">Add New</a>
+</div>
+
+<div>
+    <!-- Displaying list of artists-->
+    @{
+        foreach (var Artists in @Model)
+        {
+
+            <div class="listitem">
+                <a href="/Artist/Show/@Artists.ArtistID">@Artists.Name</a>
+                <a class="cta" href="/Artist/Update/@Artists.ArtistID">Update</a>
+            </div>
+        }
+    }
+</div>
+

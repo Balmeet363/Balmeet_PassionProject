@@ -1,0 +1,12 @@
+﻿@model BalmeetPassion_Project.Models.Artist
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+<!-- Asking for delete confirmation with artistname-->
+<h2>Are you sure you want to delete @Model.Name?</h2>
+<div>
+    <a href="/Artist/Show/@Model.ArtistID">Cancel</a>
+</div>
+<form method="POST" action="/Artist/Delete/@Model.ArtistID">
+    <div class="inpfield"><input type="submit" value="Confirm" /></div>
+</form>

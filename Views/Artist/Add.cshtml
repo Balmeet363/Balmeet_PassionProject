@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+<div>
+    <a href="/Artist/List">Back to List</a>
+</div>
+<h2>Add Artist</h2>
+<!-- Form to add an artist-->
+<form method="post" action="/Artist/Add">
+    <div><span>Name</span><input type="text" id="ArtistName" name="ArtistName" /></div>
+    <div><span>D.O.B</span><input type="text" id="ArtistDOB" name="ArtistDOB" /></div>
+    <div><span>Email</span><input type="text" id="ArtistEmail" name="ArtistEmail" /></div>
+    <div><span>Contact Number</span><input type="text" id="ArtistContact" name="ArtistContact" /></div>
+    <div><input type="submit" value="Add Artist" /></div>
+</form>
+

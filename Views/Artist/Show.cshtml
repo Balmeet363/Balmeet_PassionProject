@@ -1,0 +1,38 @@
+﻿
+@model BalmeetPassion_Project.Models.ViewModels.ShowArtist
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+<div>
+    <a  href="/Artist/List">Back to List</a>
+    <a  href="/Artist/Update/@Model.artist.ArtistID">Update</a>
+    <a  href="/Artist/DeleteConfirm/@Model.artist.ArtistID">Delete</a>
+</div>
+<div>
+    <span>Name : </span>@Model.artist.Name<br />
+    <span>DOB</span>@Model.artist.DOB<br />
+    <span>Email:</span>@Model.artist.Email<br />
+    <span>Contact:</span>@Model.artist.Contact<br />
+</div>
+
+    <div>Poetries Written:</div>
+    @{
+
+        foreach (var poetries in @Model.poetries)
+        {
+            <div>
+                <a href="/Poetry/Show/@poetries.poetryID">@poetries.poetryName</a>
+                @{
+                   
+                }
+                <a href="/Artist/DetachPoetry/@Model.artist.ArtistID?PoetryID=@poetries.poetryID">
+                    Remove Poetry
+                </a>
+            </div>
+        }
+
+    }
+
+

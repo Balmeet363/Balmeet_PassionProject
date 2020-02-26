@@ -1,0 +1,19 @@
+﻿
+@model BalmeetPassion_Project.Models.poetry
+@{
+    ViewBag.Title = "Update";
+}
+<!-- Updating a poetry-->
+<h2>Update @Model.poetryName</h2>
+<a href="/Poetries/List">Back to List</a>
+
+<form method="post" action="/Poetries/Update/@Model.poetryID">
+    <div><span>Name:</span> <input type="text" id="PoetryName" name="PoetryName" value="@Model.poetryName" /></div>
+    <div><span>Date:</span> <input type="text" id="PoetryDate" name="PoetryDate" value="@Model.poetryDate" /></div>
+    <div><span>Description</span> <input type="text" id="PoetryDesc" name="PoetryDesc" value="@Model.poetryDescription" /></div>
+    <div><input type="submit" value="update Poetry" /></div>
+</form>
+
+
+<h2>Update</h2>
+

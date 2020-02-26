@@ -1,0 +1,19 @@
+﻿
+@model BalmeetPassion_Project.Models.poetry
+@{
+    ViewBag.Title = "Show";
+}
+<!-- Displaying poetry details-->
+<h2>Show</h2>
+<div>
+    <a href="/Poetries/List">Back to List</a>
+    <a href="/Poetries/Update/@Model.poetryID">Update</a>
+    <a href="/Poetries/DeleteConfirm/@Model.poetryID">Delete</a>
+</div>
+<div>
+    <span>Name : </span>@Model.poetryName<br />
+    <span>Date</span>@Model.poetryDate<br />
+    <span>Description:</span>@Model.poetryDescription<br />
+
+</div>
+

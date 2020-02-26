@@ -1,0 +1,25 @@
+﻿@model List<BalmeetPassion_Project.Models.Comments>
+
+@{
+    ViewBag.Title = "List";
+}
+<!-- Displaying list of comments-->
+<h2>List of Comments</h2>
+<div>
+    <a  href="/Comments/Add">Add New</a>
+</div>
+<div>
+    @{
+        foreach (var comments in Model)
+        {
+            <div>
+                <div>
+                    <div><a href="/Comments/Show/@comments.commentID">@comments.commentDesc</a></div>
+                    <span><a href="/Comments/Update/@comments.commentID">Update</a></span>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        }
+    }
+    <div style="clear:both;"></div>
+</div>

@@ -1,0 +1,20 @@
+﻿
+@model BalmeetPassion_Project.Models.Artist
+@{
+    ViewBag.Title = "Update";
+}
+<!-- Updating an artist-->
+<h2>Update @Model.Name</h2>
+<a href="/Artist/List">Back to List</a>
+
+<form method="post" action="/Artist/Update/@Model.ArtistID">
+    <div class="inpfield"><span>Name:</span><input type="text" id="ArtistName" name="ArtistName" value="@Model.Name" /></div>
+    <div class="inpfield"><span>DOB</span><input type="text" id="ArtistDOB" name="ArtistDOB" value="@Model.DOB" /></div>
+    <div class="inpfield"> <span>Email:</span><input type="text" id="ArtistEmail" name="ArtistEmail" value="@Model.Email" /></div>
+    <div class="inpfield"><span>Contact:</span><input type="text" id="ArtistContact" name="ArtistContact" value="@Model.Contact" /></div>
+    <div class="inpfield"><input type="submit" value="Update Artist" /></div>
+</form>
+
+
+<h2>Update</h2>
+

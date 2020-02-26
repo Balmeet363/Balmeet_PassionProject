@@ -1,0 +1,12 @@
+﻿@model BalmeetPassion_Project.Models.Comments
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+<!-- Asking for deletion confirmation-->
+<h2>Are you sure you want to delete @Model.commentDesc?</h2>
+<div class="navbar">
+    <a href="/Pet/Show/@Model.commentID">Cancel</a>
+</div>
+<form method="POST" action="/Comments/Delete/@Model.commentID">
+    <div class="inpfield"><input type="submit" value="Confirm" /></div>
+</form>

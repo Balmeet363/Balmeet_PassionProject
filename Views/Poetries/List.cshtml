@@ -1,0 +1,23 @@
+﻿@model List<BalmeetPassion_Project.Models.poetry>
+@{
+    ViewBag.Title = "List";
+}
+<!-- Displaying poetries list-->
+<h2>Poetries List</h2>
+<div>
+    <a href="/Poetries/Add">Add New</a>
+</div>
+
+<div>
+    @{
+        foreach (var Poetries in @Model)
+        {
+
+            <div class="listitem">
+                <a href="/Poetries/Show/@Poetries.poetryID">@Poetries.poetryName</a>
+                <a href="/Poetries/Update/@Poetries.poetryID">Update</a>
+            </div>
+        }
+    }
+</div>
+
